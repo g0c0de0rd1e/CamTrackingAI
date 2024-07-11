@@ -45,7 +45,7 @@ while True:
     classes_names = results.names
     classes = results.boxes.cls.cpu().numpy()
     boxes = results.boxes.xyxy.cpu().numpy().astype(np.int32)
-    # Рисование рамок и данных 
+    # Рисование рамок
     for class_id, box in zip(results.boxes.cls.cpu().numpy(),
                              results.boxes.xyxy.cpu().numpy().astype(np.int32)):
         class_name = results.names[int(class_id)]
